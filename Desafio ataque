@@ -1,0 +1,44 @@
+class Heroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque;
+
+        // Estrutura de decisão para definir o tipo de ataque
+        switch (this.tipo.toLowerCase()) {
+            case 'mago':
+                ataque = 'magia';
+                break;
+            case 'guerreiro':
+                ataque = 'machado';
+                break;
+            case 'monge':
+                ataque = 'tai chi chuan';
+                break;
+            case 'ninja':
+                ataque = 'nunchaku';
+                break;
+            default:
+                ataque = 'um ataque genérico';
+        }
+
+        console.log(`o ${this.tipo} ${this.nome}  atacou usando ${ataque}`);
+        
+    }
+}
+
+// Criando diferentes objetos (heróis)
+const mago = new Heroi("Alakazhan", 1000, "mago");
+const guerreiro = new Heroi("Simbad", 87, "guerreiro");
+const monge = new Heroi("Shen Shan Poo", 35, "monge");
+const ninja = new Heroi("Charuto", 30, "ninja");
+
+// Chamando o método atacar para cada um
+mago.atacar();
+guerreiro.atacar();
+monge.atacar();
+ninja.atacar();
